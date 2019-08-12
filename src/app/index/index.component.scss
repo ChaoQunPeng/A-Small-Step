@@ -1,0 +1,91 @@
+
+
+.header {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 0px 4px #ddd;
+  padding: 18px 10px;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  top: 0;
+}
+
+.header > div {
+  flex: 1;
+  &:nth-child(2) {
+    flex-grow: 2;
+    text-align: center;
+  }
+  &:nth-child(3) {
+    text-align: right;
+  }
+}
+
+.index {
+  margin-top: 62px;
+}
+
+.grids {
+  display: flex;
+  flex-wrap: wrap;
+
+  .grid {
+    flex: 0 1 50%;
+    display: flex;
+    justify-content: center;
+    // border: 1px solid;
+    padding: 6px;
+  }
+}
+
+.item {
+  width: 100%;
+  padding: 15px 0;
+  cursor: pointer;
+  padding: 35px 0;
+  background: #fff;
+  box-shadow: 1px 2px 4px #ddd;
+  transition: all .5s;
+
+  > div {
+    text-align: center;
+  }
+
+  &.done {
+    box-shadow: 0 0 0 #ddd;
+    transition: all .5s;
+  }
+}
+
+.name {
+}
+
+.insist {
+  padding: 8px 0;
+  font-size: 1.4rem;
+  color: #595959;
+
+  > .days {
+    font-size: 3.6rem;
+    padding: 0 4px 0 2px;
+    color: #262626;
+  }
+}
+
+.abandon {
+  font-size: 1.4rem;
+
+  > .days{
+    padding: 0 4px;
+  }
+}
+
+.stop {
+  padding-top: 2px;
+  font-size: 1.4rem;
+
+  > .days {
+    padding: 0 4px;
+  }
+}

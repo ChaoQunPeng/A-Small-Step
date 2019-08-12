@@ -1,0 +1,23 @@
+<div class="header">
+  <div (click)="clearData()">管理</div>
+  <div></div>
+  <div routerLink="/create">添加小日常</div>
+</div>
+
+<div class="container index">
+  <div class="grids">
+    <div class="grid" *ngFor="let daily of dailies">
+      <div class="item" [class.done]="daily.Status" (click)="done(daily)">
+        <div class="name">{{daily?.Name}}</div>
+        <div class="insist">
+          坚持<span class="days">{{daily.Days}}</span>天
+        </div>
+        <div class="abandon">
+          放弃<span class="days">{{daily?.AbandonCount}}</span>次
+        </div>
+        <div class="stop">
+          停止<span class="days">{{daily?.StopCount}}</span>天</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="container">
+    <input type="text" [(ngModel)]="eventName">
+
+    <button [disabled]="checkBlank()" (click)="createDaily()">添加日常</button>
+</div>
