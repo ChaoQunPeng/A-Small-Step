@@ -1,0 +1,9 @@
+<div class="text-center">事件管理</div>
+<div>
+    <ng-container *ngFor="let item of dataSet;">
+        <div class="item" (click)="goDetail(item)">
+            {{item.Name}}
+        </div>
+    </ng-container>
+
+</div>

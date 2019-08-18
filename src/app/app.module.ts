@@ -10,12 +10,18 @@ import { CreateDailyComponent } from './create-daily/create-daily.component';
 import { HttpClientModule  } from "@angular/common/http";
 
 import {HashLocationStrategy , LocationStrategy} from '@angular/common';
+import { InputRequiredDirective } from './shared/input-required.directive';
+import { ManageComponent } from './manage/manage.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
-    CreateDailyComponent
+    CreateDailyComponent,
+    InputRequiredDirective,
+    ManageComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

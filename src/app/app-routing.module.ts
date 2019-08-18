@@ -2,10 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from "../app/index/index.component";
 import { CreateDailyComponent } from "../app/create-daily/create-daily.component";
+import { ManageComponent } from "../app/manage/manage.component";
+import { DetailComponent } from "../app/detail/detail.component";
 
 const routes: Routes = [
   { path: 'index', component: IndexComponent, data: { animation: 'IndexComponent' } },
   { path: 'create', component: CreateDailyComponent, data: { animation: 'CreateDailyComponent' } },
+  { path: 'manage', component: ManageComponent, data: { animation: 'CreateDailyComponent' } },
+  { path: 'detail/:id', component: DetailComponent, data: { animation: 'IndexComponent' } },
   { path: '',
     redirectTo: '/index',
     pathMatch: 'full'

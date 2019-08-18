@@ -29,18 +29,19 @@ export class CreateDailyComponent implements OnInit {
   /**
    * 添加日常
    */
-  createDaily() {
-    this.http.post(`${environment.server_url}/daily`, { Name: this.eventName }).subscribe(res => {
-      this.router.navigateByUrl("/index");
-      console.log(res);
-    });
+  createDaily(form) {
+    console.log(form)
+    // this.http.post(`${environment.server_url}/daily`, { Name: this.eventName }).subscribe(res => {
+    //   this.router.navigateByUrl("/index");
+    //   console.log(res);
+    // });
   }
 
   compareNumbers(a, b) { // 这个方法可以按照降序排
     return a - b;
   }
 
-  checkBlank() {
-    return this.eventName.replace(/\s*/g, "") == "" ? true : false;
-  }
+  // checkBlank() {
+  //   return this.eventName.replace(/\s*/g, "") == "" ? true : false;
+  // }
 }

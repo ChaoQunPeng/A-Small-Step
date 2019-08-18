@@ -1,0 +1,15 @@
+<div class="container">
+    <ng-container *ngIf="item?.Days!=0">
+        <div>在{{item?.CreateDate | date:'yyyy-MM-dd HH:mm:ss'}}，你给自己定下了</div>
+        <div>一个目标，每天坚持{{item?.Name}}！</div>
+        <div>到目前为止，你一共坚持了{{item?.Days}}天，</div>
+        <div>放弃了{{item?.AbandonCount}}次，</div>
+        <div>继续加油吧！积跬步，至千里！</div>
+    </ng-container>
+
+    <ng-container *ngIf="item?.Days==0">
+        <div>你给自己定下的小目标{{item?.Name}}已经{{item?.StopCount}}天没有开始啦！</div>
+        <div>上一次完成是在：{{item?.UpdateDate | date:'yyyy-MM-dd HH:mm:ss'}}</div>
+        <div>赶快行动吧！立志不坚，终不济事！</div>
+    </ng-container>
+</div>
